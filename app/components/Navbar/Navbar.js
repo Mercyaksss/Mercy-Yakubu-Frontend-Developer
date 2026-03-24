@@ -65,7 +65,7 @@ export default function Navbar() {
 
           <div className="nav-right">
             <a
-              href="https://www.fiverr.com/YOUR_USERNAME"
+              href="https://www.fiverr.com/s/Ayrj2RQ"
               target="_blank"
               rel="noopener noreferrer"
               className="nav-cta"
@@ -97,7 +97,7 @@ export default function Navbar() {
           ))}
         </ul>
         <a
-          href="https://www.fiverr.com/YOUR_USERNAME"
+          href="https://www.fiverr.com/s/Ayrj2RQ"
           target="_blank"
           rel="noopener noreferrer"
           className="mobile-cta"

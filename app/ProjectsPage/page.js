@@ -25,12 +25,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "Digital Guide Salespage",
-    desc: "A sales landing page built for my digital marketing guide. Designed and developed with conversion in mind, featuring strategic layout, persuasive copy flow, and clear CTAs to drive purchases.",
+    title: "Premium Landing Page Template",
+    desc: "A clean, responsive landing page template built with HTML and CSS. Designed for beginners to quickly customize and launch product or service pages without starting from scratch or using frameworks.",
     image: salespage,
     tags: ["HTML", "CSS", "JavaScript"],
-    liveLink: "https://digital-marketing-salespage.vercel.app/",
-    githubLink: "https://github.com/Mercyaksss/Digital-marketing-salespage",
+    liveLink: "https://mercyaksss.github.io/premium-landing-page-template/",
+    githubLink: "https://github.com/Mercyaksss/premium-landing-page-template",
     accent: "#4facfe"
   },
    {
