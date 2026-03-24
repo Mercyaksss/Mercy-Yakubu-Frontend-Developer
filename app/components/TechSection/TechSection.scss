@@ -1,0 +1,223 @@
+/* TechSection.scss */
+
+.tech-section {
+  background: var(--surface);
+  position: relative;
+  overflow: hidden;
+
+  // Subtle background texture — faint radial in centre
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 600px;
+    background: radial-gradient(ellipse, rgba(255, 107, 53, 0.04) 0%, transparent 65%);
+    pointer-events: none;
+  }
+}
+
+.tech-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 6rem;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: 4rem 1.5rem;
+  }
+}
+
+// ── Section eyebrow ───────────────────────────────
+.section-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  &::after {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--primary-border);
+    border-radius: 2px;
+  }
+}
+
+// ── Header ────────────────────────────────────────
+.tech-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.tech-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  white-space: nowrap;
+  line-height: 1.1;
+}
+
+.tech-sub {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 380px;
+  text-align: right;
+
+  @media (max-width: 768px) {
+    text-align: left;
+    max-width: 100%;
+  }
+}
+
+// ── Grid ──────────────────────────────────────────
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.85rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.65rem;
+  }
+}
+
+// ── Card ──────────────────────────────────────────
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem 0.75rem 1.25rem;
+  border-radius: 18px;
+  cursor: default;
+  animation: fadeUp 0.5s ease both;
+  position: relative;
+  overflow: hidden;
+
+  // Glassmorphism base
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.28s ease, border-color 0.28s ease,
+    box-shadow 0.28s ease, background 0.28s ease;
+
+  // Inner top shimmer line
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.08),
+      transparent
+    );
+    border-radius: 999px;
+  }
+
+  // Bottom glow — per-card colour, revealed on hover
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 60px;
+    background: radial-gradient(
+      ellipse,
+      color-mix(in srgb, var(--tech-color) 30%, transparent) 0%,
+      transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: color-mix(in srgb, var(--tech-color) 40%, transparent);
+    background: linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--tech-color) 8%, transparent) 0%,
+      color-mix(in srgb, var(--tech-color) 3%, transparent) 100%
+    );
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--tech-color) 15%, transparent),
+      0 16px 40px rgba(0, 0, 0, 0.4),
+      0 4px 16px color-mix(in srgb, var(--tech-color) 12%, transparent);
+
+    &::after {
+      opacity: 1;
+    }
+
+    .tech-name {
+      color: color-mix(in srgb, var(--tech-color) 90%, white);
+    }
+
+    .tech-icon-wrap {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// ── Icon wrapper ──────────────────────────────────
+.tech-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 0.28s ease;
+  position: relative;
+  z-index: 1;
+}
+
+// ── Label ─────────────────────────────────────────
+.tech-name {
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-weight: 500;
+  text-align: center;
+  transition: color 0.28s ease;
+  font-family: var(--font-body);
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}

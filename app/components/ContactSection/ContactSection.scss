@@ -1,0 +1,278 @@
+/* ContactSection.scss */
+
+.contact-section {
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 2.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    padding: 5rem 1.5rem 3rem;
+  }
+}
+
+// ── Layered glows ─────────────────────────────────
+.contact-glow {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 50%;
+
+  &--warm {
+    bottom: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.08) 0%, transparent 65%);
+  }
+
+  &--cool {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(79, 172, 254, 0.04) 0%, transparent 65%);
+  }
+}
+
+// ── Title ─────────────────────────────────────────
+.contact-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+  margin-top: 0.5rem;
+
+  .contact-title-accent {
+    background: linear-gradient(135deg, #ff6b35 0%, #e040fb 50%, #4facfe 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 5s linear infinite;
+  }
+}
+
+.contact-sub {
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 440px;
+  line-height: 1.8;
+  margin-bottom: 2.75rem;
+}
+
+// ── CTA card ──────────────────────────────────────
+.contact-card {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+
+  // Top shimmer edge
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15%;
+    right: 15%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  }
+
+  // Subtle warm glow inside card
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 120px;
+    background: radial-gradient(ellipse, rgba(255, 107, 53, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+}
+
+// ── Email row ─────────────────────────────────────
+.contact-email-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 0;
+}
+
+.email-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--primary-dim);
+  border: 1px solid var(--primary-border);
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.email-address {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text);
+  flex: 1;
+  text-align: left;
+  letter-spacing: 0.01em;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+  }
+}
+
+.email-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+  transition: all 0.22s ease;
+
+  @media (max-width: 408px) {
+    padding: 0.35rem 0.5rem;
+    font-size: 0;        // hide text, show icon only
+    gap: 0;
+
+    svg { flex-shrink: 0; font-size: initial; }
+  }
+
+  &:hover {
+    border-color: var(--primary-border);
+    color: var(--primary);
+    background: var(--primary-dim);
+  }
+
+  &.copied {
+    border-color: rgba(34, 197, 94, 0.4);
+    color: #22c55e;
+    background: rgba(34, 197, 94, 0.08);
+    pointer-events: none;
+  }
+}
+
+.contact-card-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 1.25rem 0;
+}
+
+// ── Action buttons ────────────────────────────────
+.contact-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+
+  .btn-primary,
+  .btn-ghost {
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
+  }
+}
+
+// ── Social buttons ────────────────────────────────
+.contact-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 5rem;
+
+  .social-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    text-decoration: none;
+    transition: all 0.22s ease;
+
+    &:hover {
+      border-color: var(--primary-border);
+      color: var(--primary);
+      background: var(--primary-dim);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 107, 53, 0.15);
+    }
+  }
+}
+
+// ── Footer ────────────────────────────────────────
+.contact-footer {
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    font-size: 0.78rem;
+    color: var(--faint);
+    margin: 0;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
