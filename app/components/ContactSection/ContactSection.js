@@ -67,7 +67,7 @@ export default function ContactSection() {
               Send an Email <ArrowUpRight size={15} />
             </a>
             <a
-              href="https://www.fiverr.com/YOUR_USERNAME"
+              href="https://www.fiverr.com/s/Ayrj2RQ"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ghost"
