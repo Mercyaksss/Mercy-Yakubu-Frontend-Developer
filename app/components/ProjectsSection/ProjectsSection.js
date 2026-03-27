@@ -18,7 +18,7 @@ import luxeglow from '../../assets/luxeglow.png'
 const projects = [
    {
     num: '01',
-    title: 'LuxeGlow &hyphen; Makeup Artist Booking Website Template',
+    title: 'LuxeGlow – Makeup Artist Booking Website Template',
     description:
       'A modern, luxury booking website template for makeup artists, designed to attract clients and increase bookings with clean UI, responsive layout, and conversion-focused sections built using HTML and CSS.',
     tags: ['Next.js', 'SCSS'],
@@ -51,14 +51,14 @@ const projects = [
   },
   {
     num: '04',
-    title: 'LuxeGlow – Makeup Artist Booking Website Template',
+    title: 'Space Tourism',
     description:
-      'A modern, luxury booking website template for makeup artists, designed to attract clients and increase bookings with clean UI, responsive layout, and conversion-focused sections built using HTML and CSS.',
+      'A multi-page space tourism site featuring dynamic routing and interactive content sections. Focused on creating an immersive experience with polished UI and smooth navigation.',
     tags: ['Next.js', 'SCSS'],
-    accent: '#f7df1e',
-    thumb:  luxeglow,
-    github: 'https://github.com/Mercyaksss/Premium-Service-Booking-Landing-Page-Template',
-    live: 'https://premium-service-booking-landing-pag.vercel.app/',
+    accent: '#a78bfa',
+    thumb: space,
+    github: 'https://github.com/Mercyaksss/Space-Tourism',
+    live: 'https://space-tourism-mu-ten.vercel.app/',
   },
 ];
 
