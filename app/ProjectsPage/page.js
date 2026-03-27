@@ -6,7 +6,6 @@ import { ArrowUpRight, Github, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import shoestore from '../assets/shoestore.png';
 import salespage from '../assets/salespage.png';
-import space from '../assets/space.png';
 import fylo from '../assets/Fylo.png';
 import restapi from '../assets/restapi.png';
 import themeswitcher from '../assets/themeswitcher.png';
@@ -26,7 +25,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "LuxeGlow – Makeup Artist Booking Website Template",
+    title: "LuxeGlow &hyphen; Makeup Artist Booking Website Template",
     desc: "A modern, luxury booking website template for makeup artists, designed to attract clients and increase bookings with clean UI, responsive layout, and conversion-focused sections built using HTML and CSS.",
     image: luxeglow,
     tags: ["HTML", "CSS", "JavaScript"],

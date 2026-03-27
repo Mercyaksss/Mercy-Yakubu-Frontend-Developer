@@ -16,8 +16,19 @@ import luxeglow from '../../assets/luxeglow.png'
 // Until then, each card shows a styled gradient placeholder.
 
 const projects = [
-  {
+   {
     num: '01',
+    title: 'LuxeGlow &hyphen; Makeup Artist Booking Website Template',
+    description:
+      'A modern, luxury booking website template for makeup artists, designed to attract clients and increase bookings with clean UI, responsive layout, and conversion-focused sections built using HTML and CSS.',
+    tags: ['Next.js', 'SCSS'],
+    accent: '#f7df1e',
+    thumb:  luxeglow,
+    github: 'https://github.com/Mercyaksss/Premium-Service-Booking-Landing-Page-Template',
+    live: 'https://premium-service-booking-landing-pag.vercel.app/',
+  },
+  {
+    num: '02',
     title: 'Shoe store',
     description:
       'A personal Figma-to-code build practising e-commerce UI — responsive layout, product grid, and cart flow.',
@@ -28,7 +39,7 @@ const projects = [
     live: 'https://sole-e-commerce-shoe-store.vercel.app/',
   },
   {
-    num: '02',
+    num: '03',
     title: 'Shoe Store REST API',
     description:
       'A RESTful API built with Node.js and Express.js that serves product data for an e-commerce shoe store. Features multiple endpoints with filtering capabilities by brand, category, gender, and price range.',
@@ -39,7 +50,7 @@ const projects = [
     live: 'https://shoe-store-api-dei7.onrender.com/api/shoes',
   },
   {
-    num: '03',
+    num: '04',
     title: 'LuxeGlow – Makeup Artist Booking Website Template',
     description:
       'A modern, luxury booking website template for makeup artists, designed to attract clients and increase bookings with clean UI, responsive layout, and conversion-focused sections built using HTML and CSS.',
@@ -48,17 +59,6 @@ const projects = [
     thumb:  luxeglow,
     github: 'https://github.com/Mercyaksss/Premium-Service-Booking-Landing-Page-Template',
     live: 'https://premium-service-booking-landing-pag.vercel.app/',
-  },
-  {
-    num: '04',
-    title: 'Space Tourism',
-    description:
-      'A multi-page space tourism site featuring dynamic routing and interactive content sections. Focused on creating an immersive experience with polished UI and smooth navigation.',
-    tags: ['Next.js', 'SCSS'],
-    accent: '#a78bfa',
-    thumb: space,
-    github: 'https://github.com/Mercyaksss/Space-Tourism',
-    live: 'https://space-tourism-mu-ten.vercel.app/',
   },
 ];
 
