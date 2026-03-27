@@ -5,8 +5,8 @@ import { ArrowUpRight, Github } from 'lucide-react';
 import './ProjectsSection.scss';
 import shoestore from '../../assets/shoestore.png'
 import restapi from '../../assets/restapi.png'
-import salespage from '../../assets/salespage.png'
 import space from '../../assets/space.png'
+import luxeglow from '../../assets/luxeglow.png'
 
 
 
@@ -40,14 +40,14 @@ const projects = [
   },
   {
     num: '03',
-    title: 'Digital guide Salespage',
+    title: 'LuxeGlow – Makeup Artist Booking Website Template',
     description:
-      'A sales landing page built for my digital marketing guide. Designed and developed with conversion in mind, featuring strategic layout, persuasive copy flow, and clear CTAs to drive purchases.',
+      'A modern, luxury booking website template for makeup artists, designed to attract clients and increase bookings with clean UI, responsive layout, and conversion-focused sections built using HTML and CSS.',
     tags: ['Next.js', 'SCSS'],
     accent: '#f7df1e',
-    thumb:  salespage,
-    github: 'https://github.com/Mercyaksss/Digital-marketing-salespage',
-    live: 'https://digital-marketing-salespage.vercel.app/',
+    thumb:  luxeglow,
+    github: 'https://github.com/Mercyaksss/Premium-Service-Booking-Landing-Page-Template',
+    live: 'https://premium-service-booking-landing-pag.vercel.app/',
   },
   {
     num: '04',

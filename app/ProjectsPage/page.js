@@ -11,6 +11,7 @@ import fylo from '../assets/Fylo.png';
 import restapi from '../assets/restapi.png';
 import themeswitcher from '../assets/themeswitcher.png';
 import newshomepage from '../assets/newshomepage.png';
+import luxeglow from '../assets/luxeglow.png'
 
 const projects = [
   {
@@ -25,12 +26,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "Premium Landing Page Template",
-    desc: "A clean, responsive landing page template built with HTML and CSS. Designed for beginners to quickly customize and launch product or service pages without starting from scratch or using frameworks.",
-    image: salespage,
+    title: "LuxeGlow – Makeup Artist Booking Website Template",
+    desc: "A modern, luxury booking website template for makeup artists, designed to attract clients and increase bookings with clean UI, responsive layout, and conversion-focused sections built using HTML and CSS.",
+    image: luxeglow,
     tags: ["HTML", "CSS", "JavaScript"],
-    liveLink: "https://mercyaksss.github.io/premium-landing-page-template/",
-    githubLink: "https://github.com/Mercyaksss/premium-landing-page-template",
+    liveLink: "https://premium-service-booking-landing-pag.vercel.app/",
+    githubLink: "https://github.com/Mercyaksss/Premium-Service-Booking-Landing-Page-Template",
     accent: "#4facfe"
   },
    {
@@ -72,6 +73,16 @@ const projects = [
     liveLink: "https://news-homepage-alpha-sooty.vercel.app/",
     githubLink: "https://github.com/Mercyaksss/news-homepage",
     accent: "#F7DF1E"
+  },
+  {
+    id: 7,
+    title: "Premium Landing Page Template",
+    desc: "A clean, responsive landing page template built with HTML and CSS. Designed for beginners to quickly customize and launch product or service pages without starting from scratch or using frameworks.",
+    image: salespage,
+    tags: ["HTML", "CSS", "JavaScript"],
+    liveLink: "https://mercyaksss.github.io/premium-landing-page-template/",
+    githubLink: "https://github.com/Mercyaksss/premium-landing-page-template",
+    accent: "#4facfe"
   },
   
 ];
